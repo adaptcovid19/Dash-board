@@ -3,6 +3,7 @@
   <head>
     <title>Super Bowl Bar Chart</title>
     <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
   </head>
   <body>
     <div id="container" style="width: 100%; height: 100%"></div>
@@ -29,6 +30,19 @@
           chart.draw();
         });
       });
+    </script>
+    <script>
+      var x = [];
+for (var i = 0; i < 500; i ++) {
+	x[i] = Math.random();
+}
+
+var trace = {
+    x: x,
+    type: 'histogram',
+  };
+var data = [trace];
+Plotly.newPlot('myDiv', data);
     </script>
   </body>
 </html>
