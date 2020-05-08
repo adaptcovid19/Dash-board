@@ -8,14 +8,14 @@
     <div id="container" style="width: 100%; height: 100%"></div>
     <script>
       anychart.onDocumentReady(function() {                                         // Fetch Data from the API
-        fetch('https://api.apispreadsheets.com/data/490/?dataFormat=matrix')
+        fetch('https://api.apispreadsheets.com/data/491/?dataFormat=matrix')
         .then((response) => {
             return response.json();
         })
         .then((myJson) => {
          // create data variable for the chart
           var data = {
-            header: ["Team", "Wins"],
+            header: ["S.No", "12th %"],
             rows: myJson.data
           }
           // create the chart
